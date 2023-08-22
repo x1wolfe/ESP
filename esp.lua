@@ -18,12 +18,9 @@ function AddPartESP(part,TextColor,BillBoardName)
         name.TextStrokeTransparency = 0.5
 
         RunService.RenderStepped:Connect(function()
-if Character:FindFirstChild("Head") then
 name.Text = part.Parent.Name.." ["..GetDistance(Character.HumanoidRootPart,part).."]"
-else
-    end
     end)
-    end
+end
 
     function AddPlayerESP(part,TextColor,BillBoardName)
 
@@ -47,8 +44,8 @@ else
         name.TextStrokeTransparency = 0.5
 
         RunService.RenderStepped:Connect(function()
-if Character:FindFirstChild("Head") then
-name.Text = part.Parent.Name.." ["..GetDistance(Character.HumanoidRootPart,part).."]"
+            if Character:FindFirstChild("Head") and part.Parent then
+                name.Text = part.Parent.Name.." ["..GetDistance(Character.HumanoidRootPart,part).."]"
 else
     end
     end)
