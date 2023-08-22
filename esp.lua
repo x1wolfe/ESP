@@ -26,6 +26,10 @@ else
     end
 
     function AddPlayerESP(part,TextColor,BillBoardName)
+
+    if LocalPlayer.Name == part.Parent.Name then
+
+        else
         
         local bill = Instance.new("BillboardGui", part)
         bill.Name = BillBoardName
@@ -49,3 +53,6 @@ else
     end
     end)
     end
+    end
+
+    --Example AddPlayerESP(character.Head,Color3.new(0,255,255),"PlayerESP")
