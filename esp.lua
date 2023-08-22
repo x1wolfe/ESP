@@ -18,9 +18,9 @@ function AddPartESP(part,TextColor,BillBoardName)
         name.TextStrokeTransparency = 0.5
 
         RunService.RenderStepped:Connect(function()
+if part == nil then
 
-
-
+else
 name.Text = part.Name.." ["..GetDistance(Character.HumanoidRootPart,part).."]"
     end)
     end
@@ -43,9 +43,9 @@ name.Text = part.Name.." ["..GetDistance(Character.HumanoidRootPart,part).."]"
         name.TextStrokeTransparency = 0.5
 
         RunService.RenderStepped:Connect(function()
+if part == nil then
 
-
-
+else
 name.Text = part.Parent.Name.." ["..GetDistance(Character.HumanoidRootPart,part).."]"
     end)
     end
