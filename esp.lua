@@ -16,3 +16,5 @@ function AddESP(part,TextColor,BillBoardName)
         name.TextSize = 11
         name.TextStrokeTransparency = 0.5
     end
+
+    --AddESP(workspace.Baseplate,Color3.fromRGB(255,255,255),"WorkspaceESP")
