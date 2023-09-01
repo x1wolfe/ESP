@@ -1,5 +1,3 @@
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Arcadian420/Services/main/lua.lua'))()
-
 function AddPartESP(part,TextColor,BillBoardName)
         
         local bill = Instance.new("BillboardGui", part)
