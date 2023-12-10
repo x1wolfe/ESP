@@ -31,6 +31,7 @@ function AddPlayerEsp(char,TargetName,TextColor,BillBoardName)
     bill.Size = UDim2.new(30,50,30,50)
     bill.Adornee = Target
     bill.AlwaysOnTop = true
+    bill.StudsOffset = Vector3.new(0, 2.5, 0)
     local name = Instance.new("TextLabel", bill)
      name.Font = Enum.Font.Arial
     name.TextWrapped = true
