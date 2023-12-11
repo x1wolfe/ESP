@@ -62,6 +62,7 @@ function SetEsp(TargetName,boolean)
 for i,v in pairs(workspace:GetDescendants()) do
 if v.Name == TargetName then
 v:SetAttribute("On",boolean)
+print(boolean)
 end
 end
 end
