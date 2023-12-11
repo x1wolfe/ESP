@@ -33,6 +33,7 @@ Chams.FillColor = Color
 Chams.FillTransparency = 0
 Chams.OutlineTransparency = 1
 Chams.Name = "HighlightName"
+Chams.Enabled = false
 Chams.Parent = model
 end
 
