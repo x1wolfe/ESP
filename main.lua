@@ -1,6 +1,6 @@
 --Functions
-function AddPlayerEsp(char,TargetName,TextColor,BillBoardName)
-    local Target = char:FindFirstChild(TargetName)
+function AddPlayerESP(model,TargetName,TextColor,BillBoardName)
+    local Target = model:FindFirstChild(TargetName)
 
     local bill = Instance.new("BillboardGui", Target)
     bill:SetAttribute("On",true)
@@ -22,12 +22,12 @@ function AddPlayerEsp(char,TargetName,TextColor,BillBoardName)
 
     RunService.RenderStepped:Connect(function()
         if bill.Enabled == true then
-name.Text = char.Name.." ["..GetDistance(Character.HumanoidRootPart,Target).."]"
+name.Text = model.Name.." ["..GetDistance(Character.HumanoidRootPart,Target).."]"
     end
 end)
 end
 
-function SetEsp(TargetName,boolean)
+function SetESP(TargetName,boolean)
 for i,v in pairs(workspace:GetDescendants()) do
 if v.Name == TargetName then
     v.Enabled = boolean
