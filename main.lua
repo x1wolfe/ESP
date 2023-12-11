@@ -61,11 +61,7 @@ end
 function SetEsp(TargetName,boolean)
 for i,v in pairs(workspace:GetDescendants()) do
 if v.Name == TargetName then
-    local Setting = v:GetAttribute("On")
     v:SetAttribute("On",boolean)
-
-    v.Enabled = Setting
-    print(v.Enabled)
 end
 end
 end
