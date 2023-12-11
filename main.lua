@@ -26,6 +26,16 @@ name.Text = model.Name.." ["..GetDistance(Character.HumanoidRootPart,Target).."]
 end)
 end
 
+function AddPlayerChams(model,Color,HighlightName)
+local Chams = Instance.new("Highlight")
+Chams.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+Chams.FillColor = Color
+Chams.FillTransparency = 0
+Chams.OutlineTransparency = 1
+Chams.Name = "HighlightName"
+Chams.Parent = model
+end
+
 function SetESP(TargetName,boolean)
 for i,v in pairs(workspace:GetDescendants()) do
 if v.Name == TargetName then
