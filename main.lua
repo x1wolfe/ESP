@@ -16,7 +16,7 @@ function AddPartESP(part,TextColor,BillBoardName)
         name.TextStrokeTransparency = 0
 
         RunService.RenderStepped:Connect(function()
-            if bill.Enabled == true tehn
+            if bill.Enabled == true then
 name.Text = part.Name.." ["..GetDistance(Character.HumanoidRootPart,part).."]"
     end
     end)
@@ -44,7 +44,7 @@ function AddPlayerEsp(char,TargetName,TextColor,BillBoardName)
     name.TextStrokeTransparency = 0
 
     RunService.RenderStepped:Connect(function()
-        if bill.Enabled == true
+        if bill.Enabled == true then
 name.Text = char.Name.." ["..GetDistance(Character.HumanoidRootPart,Target).."]"
     end
 end)
