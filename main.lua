@@ -65,6 +65,7 @@ if v.Name == TargetName then
     v:SetAttribute("On",boolean)
 
     v.Enabled = Setting
+    print(v.Enabled)
 end
 end
 end
