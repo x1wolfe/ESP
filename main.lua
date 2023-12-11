@@ -3,8 +3,6 @@ function AddPlayerESP(model,TargetName,TextColor,BillBoardName)
     local Target = model:FindFirstChild(TargetName)
 
     local bill = Instance.new("BillboardGui", Target)
-    bill:SetAttribute("On",true)
-    local Setting = bill:GetAttribute("On")
     bill.Name = BillBoardName
     bill.Size = UDim2.new(30,50,30,50)
     bill.Adornee = Target
