@@ -1,7 +1,8 @@
 --Functions
 function AddPartESP(part,TextColor,BillBoardName)
         local bill = Instance.new("BillboardGui", part)
-        local Setting = bill:SetAttribute("On",true)
+        bill:SetAttribute("On",true)
+        local Setting = bill:GetAttribute("On")
         bill.Name = BillBoardName
         bill.Size = UDim2.new(30,50,30,50)
         bill.Adornee = part
@@ -30,7 +31,8 @@ function AddPlayerEsp(char,TargetName,TextColor,BillBoardName)
     local Target = char:FindFirstChild(TargetName)
 
     local bill = Instance.new("BillboardGui", Target)
-    local Setting = bill:SetAttribute("On",true)
+    bill:SetAttribute("On",true)
+    local Setting = bill:GetAttribute("On")
     bill.Name = BillBoardName
     bill.Size = UDim2.new(30,50,30,50)
     bill.Adornee = Target
