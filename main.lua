@@ -1,8 +1,6 @@
 --Functions
 function AddPartESP(part,TextColor,BillBoardName)
         local bill = Instance.new("BillboardGui", part)
-        bill:SetAttribute("On",true)
-        local Setting = bill:GetAttribute("On")
         bill.Name = BillBoardName
         bill.Size = UDim2.new(30,50,30,50)
         bill.Adornee = part
@@ -18,11 +16,8 @@ function AddPartESP(part,TextColor,BillBoardName)
         name.TextStrokeTransparency = 0
 
         RunService.RenderStepped:Connect(function()
-            if Setting == true then
+            if bill.Enabled == true tehn
 name.Text = part.Name.." ["..GetDistance(Character.HumanoidRootPart,part).."]"
-bill.Enabled = true
-else
-    bill.Enabled = false
     end
     end)
 end
@@ -49,19 +44,16 @@ function AddPlayerEsp(char,TargetName,TextColor,BillBoardName)
     name.TextStrokeTransparency = 0
 
     RunService.RenderStepped:Connect(function()
-if Setting == true then
+        if bill.Enabled == true
 name.Text = char.Name.." ["..GetDistance(Character.HumanoidRootPart,Target).."]"
-bill.Enabled = true
-else
-bill.Enabled = false
-end
+    end
 end)
 end
 
 function SetEsp(TargetName,boolean)
 for i,v in pairs(workspace:GetDescendants()) do
 if v.Name == TargetName then
-    v:SetAttribute("On",boolean)
+    v.Enabled = boolean
 end
 end
 end
