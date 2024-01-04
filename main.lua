@@ -1,9 +1,9 @@
 --Functions
-function AddPartESP(model,TargetName,TextColor,BillBoardName)
+function AddESP(model,TargetName,TextColor,BillBoardName)
     local Target = model:FindFirstChild(TargetName)
 
     local bill = Instance.new("BillboardGui", Target)
-    bill.Enabled = false
+    bill.Enabled = GetBoolESP(BillBoardName)
     bill.Name = BillBoardName
     bill.Size = UDim2.new(30,50,30,50)
     bill.Adornee = Target
@@ -26,14 +26,14 @@ name.Text = model.Name.." ["..GetDistance(Character.HumanoidRootPart,Target).."]
 end)
 end
 
-function AddPartChams(model,Color,HighlightName)
+function AddChams(model,Color,HighlightName)
 local Chams = Instance.new("Highlight")
 Chams.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
 Chams.FillColor = Color
 Chams.FillTransparency = 0
 Chams.OutlineTransparency = 1
 Chams.Name = HighlightName
-Chams.Enabled = false
+Chams.Enabled = GetBoolESP(HighlightName)
 Chams.Parent = model
 end
 
