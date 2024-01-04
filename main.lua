@@ -4,12 +4,12 @@ function AddESP(model,TargetName,TextColor,BillBoardName,bool)
 
     local bill = Instance.new("BillboardGui")
     bill.Name = BillBoardName
-    bill.Enabled = bool
     bill.Size = UDim2.new(30,50,30,50)
     bill.Adornee = Target
     bill.AlwaysOnTop = true
     bill.StudsOffset = Vector3.new(0, 1.5, 0)
     bill.Parent = Target
+    bill.Enabled = bool
     local name = Instance.new("TextLabel", bill)
      name.Font = Enum.Font.Arial
     name.TextWrapped = true
@@ -34,8 +34,8 @@ Chams.FillColor = Color
 Chams.FillTransparency = 0
 Chams.OutlineTransparency = 1
 Chams.Name = HighlightName
-Chams.Enabled = bool
 Chams.Parent = model
+Chams.Enabled = bool
 end
 
 function SetESP(TargetName,boolean)
