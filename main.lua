@@ -50,6 +50,8 @@ for i,v in pairs(workspace:GetDescendants()) do
    if v.Name == TargetName then
 
     return v.Enabled
+   else
+    return true
    end 
 end
 end
