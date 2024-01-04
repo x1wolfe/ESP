@@ -1,5 +1,5 @@
 --Functions
-function AddPlayerESP(model,TargetName,TextColor,BillBoardName)
+function AddPartESP(model,TargetName,TextColor,BillBoardName)
     local Target = model:FindFirstChild(TargetName)
 
     local bill = Instance.new("BillboardGui", Target)
@@ -26,7 +26,7 @@ name.Text = model.Name.." ["..GetDistance(Character.HumanoidRootPart,Target).."]
 end)
 end
 
-function AddPlayerChams(model,Color,HighlightName)
+function AddPartChams(model,Color,HighlightName)
 local Chams = Instance.new("Highlight")
 Chams.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
 Chams.FillColor = Color
