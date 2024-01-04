@@ -2,13 +2,14 @@
 function AddESP(model,TargetName,TextColor,BillBoardName)
     local Target = model:FindFirstChild(TargetName)
 
-    local bill = Instance.new("BillboardGui", Target)
+    local bill = Instance.new("BillboardGui")
     bill.Enabled = GetBoolESP(BillBoardName)
     bill.Name = BillBoardName
     bill.Size = UDim2.new(30,50,30,50)
     bill.Adornee = Target
     bill.AlwaysOnTop = true
     bill.StudsOffset = Vector3.new(0, 1.5, 0)
+    bill.Parent = Target
     local name = Instance.new("TextLabel", bill)
      name.Font = Enum.Font.Arial
     name.TextWrapped = true
