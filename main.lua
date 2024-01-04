@@ -3,8 +3,8 @@ function AddESP(model,TargetName,TextColor,BillBoardName)
     local Target = model:WaitForChild(TargetName)
 
     local bill = Instance.new("BillboardGui")
-    bill.Enabled = GetBoolESP(BillBoardName)
     bill.Name = BillBoardName
+    bill.Enabled = GetBoolESP(BillBoardName)
     bill.Size = UDim2.new(30,50,30,50)
     bill.Adornee = Target
     bill.AlwaysOnTop = true
@@ -49,7 +49,7 @@ end
 function GetBoolESP(TargetName)
 for i,v in pairs(workspace:GetDescendants()) do
    if v.Name == TargetName then
-
+    print(v.Enabled)
     return v.Enabled
    else
     return false
