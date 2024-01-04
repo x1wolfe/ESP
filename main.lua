@@ -44,3 +44,12 @@ if v.Name == TargetName then
 end
 end
 end
+
+function GetBoolESP(TargetName)
+for i,v in pairs(workspace:GetDescendants()) do
+   if v.Name == TargetName then
+
+    return v.Enabled
+   end 
+end
+end
