@@ -48,9 +48,8 @@ end
 
 function GetBoolESP(TargetName)
 for i,v in pairs(workspace:GetDescendants()) do
-   if v.Name == TargetName then
-    print(v.Enabled)
-    return v.Enabled
+   if v.Name == TargetName and v.Enabled == true then
+    return true
    else
     return false
    end 
