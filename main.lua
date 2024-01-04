@@ -1,6 +1,6 @@
 --Functions
 function AddESP(model,TargetName,TextColor,BillBoardName)
-    local Target = model:FindFirstChild(TargetName)
+    local Target = model:WaitForChild(TargetName)
 
     local bill = Instance.new("BillboardGui")
     bill.Enabled = GetBoolESP(BillBoardName)
