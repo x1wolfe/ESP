@@ -1,10 +1,10 @@
 --Functions
-function AddESP(model,TargetName,TextColor,BillBoardName)
+function AddESP(model,TargetName,TextColor,BillBoardName,bool)
     local Target = model:WaitForChild(TargetName)
 
     local bill = Instance.new("BillboardGui")
     bill.Name = BillBoardName
-    bill.Enabled = GetBoolESP(BillBoardName)
+    bill.Enabled = bool
     bill.Size = UDim2.new(30,50,30,50)
     bill.Adornee = Target
     bill.AlwaysOnTop = true
@@ -27,14 +27,14 @@ name.Text = model.Name.." ["..GetDistance(Character.HumanoidRootPart,Target).."]
 end)
 end
 
-function AddChams(model,Color,HighlightName)
+function AddChams(model,Color,HighlightName,bool)
 local Chams = Instance.new("Highlight")
 Chams.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
 Chams.FillColor = Color
 Chams.FillTransparency = 0
 Chams.OutlineTransparency = 1
 Chams.Name = HighlightName
-Chams.Enabled = GetBoolESP(HighlightName)
+Chams.Enabled = bool
 Chams.Parent = model
 end
 
