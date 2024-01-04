@@ -52,6 +52,7 @@ for i,v in pairs(workspace:GetDescendants()) do
     print(v.Enabled)
     return v.Enabled
    else
+    print(v.Enabled)
     return false
    end 
 end
